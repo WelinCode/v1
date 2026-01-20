@@ -1,73 +1,72 @@
-# React + TypeScript + Vite
+# WelinDev Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Portafolio personal construido con React, TypeScript y Tailwind CSS.
 
-Currently, two official plugins are available:
+## Tecnologias
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **React 19** - Biblioteca UI
+- **TypeScript** - Tipado estatico
+- **Tailwind CSS 4** - Estilos utilitarios
+- **Vite** - Build tool y dev server
 
-## React Compiler
+## Estructura del Proyecto
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```
+src/
+├── components/
+│   ├── icons/          # Iconos SVG (Github, LinkedIn, etc.)
+│   ├── ui/             # Componentes reutilizables (Tag, SocialLink, ResumeButton)
+│   ├── cards/          # Tarjetas (ExperienceCard, ProjectCard)
+│   ├── layout/         # Layout (Header, Navigation, Footer)
+│   └── sections/       # Secciones (About, Skills, Experience, Projects)
+├── hooks/              # Custom hooks (useMousePosition, useActiveSection)
+├── data/               # Datos del portafolio
+├── App.tsx             # Componente principal
+└── index.css           # Estilos base
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Caracteristicas
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- Efecto spotlight que sigue el cursor
+- Navegacion sticky con indicador de seccion activa
+- Diseno responsive (mobile/desktop)
+- Scroll suave entre secciones
+- Componentes modulares y reutilizables
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## Instalacion
+
+```bash
+# Instalar dependencias
+npm install
+
+# Iniciar servidor de desarrollo
+npm run dev
+
+# Build para produccion
+npm run build
 ```
+
+## Personalizacion
+
+Edita el archivo `src/data/portfolio.ts` para modificar:
+
+- Informacion personal (`profileData`)
+- Secciones de navegacion (`navigationItems`)
+- Redes sociales (`socialLinks`)
+- Contenido "Sobre mi" (`aboutContent`)
+- Experiencia laboral (`experiences`)
+- Proyectos (`projects`)
+- Habilidades (`skillCategories`)
+
+## Scripts
+
+| Comando | Descripcion |
+|---------|-------------|
+| `npm run dev` | Inicia el servidor de desarrollo |
+| `npm run build` | Genera build de produccion |
+| `npm run preview` | Preview del build de produccion |
+| `npm run lint` | Ejecuta ESLint |
+
+## Licencia
+
+MIT
