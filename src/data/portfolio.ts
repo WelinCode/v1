@@ -48,7 +48,7 @@ export const profileData = {
   name: 'WelinDev',
   role: 'Web Developer',
   description: 'Creo experiencias digitales accesibles y con píxeles perfectos para la web.',
-  resumeUrl: 'resume.pdf',
+  resumeUrl: 'CVs.pdf',
 };
 
 export const navigationItems: NavItem[] = [
@@ -131,4 +131,12 @@ export const certifications: Certification[] = [
     credentialUrl: 'https://www.udemy.com/certificate/UC-6da53923-0f03-44d0-b3f7-faf6dab85362/',
     image: 'https://imgur.com/EERn9wC.jpg',
   },
+  {
+    id: 'design-cert',
+    name: 'Tecnico en Diseño de Paginas Web',
+    issuer: 'CENTU',
+    date: '2024',
+    credentialUrl: 'https://welindev.vercel.app',
+    image: 'https://imgur.com/APDPS2H.png',
+  }
 ];
