@@ -107,6 +107,6 @@ export const skillCategories: SkillCategory[] = [
   {
     id: 'tools',
     name: 'Herramientas',
-    skills: ['Git', 'GitHub', 'VS Code', 'Docker', 'Azure', 'AWS', 'Shopify'],
+    skills: ['Git', 'GitHub', 'Cursor', 'Docker', 'Azure', 'AWS', 'Shopify'],
   },
 ];
