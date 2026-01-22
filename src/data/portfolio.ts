@@ -138,5 +138,13 @@ export const certifications: Certification[] = [
     date: '2024',
     credentialUrl: 'https://imgur.com/APDPS2H.png',
     image: 'https://imgur.com/APDPS2H.png',
+  },
+  {
+    id: 'responsive-design-cert',
+    name: 'Responsive Web Design',
+    issuer: 'freeCodeCamp',
+    date: '2025',
+    credentialUrl: 'https://www.freecodecamp.org/certification/fcc0693b03e-293d-4a2d-8d20-1e0e795760e7/responsive-web-design',
+    image: 'https://imgur.com/AhxeSyz.png',
   }
 ];
